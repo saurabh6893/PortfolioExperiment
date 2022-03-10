@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Epilogue:wght@300&display=swap');
 body {
   font-family: 'Roboto', 'sans-serif';
   display: flex;
@@ -10,35 +11,40 @@ body {
   justify-content: center;
   overflow-x: hidden;
   margin: 0;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
 }
 
 .box {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 75vw;
-  height: 60vh;
-  background-color: rgb(0, 105, 105);
+  height: 70vh;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
   color: #fff;
   font-family: 'Courier New', Courier, monospace;
   margin: 13vh 30vw 13vh 30vw;
   border-radius: 40px;
-  box-shadow: 15px 5px 25px rgb(9, 189, 189);
+  border: 2px solid black;
+
   transform: translateX(400%);
-  transition: transform 0.4s ease;
+  transition: transform 1s ease;
 }
 
 .panel {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90%;
+  height: 95%;
+  margin: 20px;
+  border: 2px solid black;
   border-radius: 20px;
   color: #fff;
-  margin: 10px;
   cursor: pointer;
-  flex: 0.3;
+  flex: 1;
   position: relative;
   transition: flex 0.5s ease-in;
 }
@@ -57,7 +63,7 @@ body {
 }
 
 .panel.active h3 {
-  opacity: 1;
+  opacity: 100;
   transform: opacity 0.3s ease-in 0.4s;
 }
 .box:nth-of-type(even) {
@@ -67,5 +73,113 @@ body {
   transform: translateX(0);
 }
 .box h3 {
+  font-size: 100px;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Miriam+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* body {
+  width: 99vw;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  font-size: 120%;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-image: url('https://source.unsplash.com/1600x900/?Landscape');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} */
+
+.card {
+  background: #02051fb9;
+  padding: 2em;
+  color: white;
+}
+button {
+  outline: none;
+  width: 30px;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 10px;
+  background-color: #160f3a86;
+  border: none;
+  transition: background 0.5s ease;
+}
+
+.card .description {
+  text-transform: capitalize;
+}
+button:hover {
+  background-color: #433390e8;
+}
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search .searchBar {
+  outline: none;
+  border-radius: 5%;
+  width: calc(100% -30px);
+  padding: 0.7em;
+  border-radius: 10px;
+  border: none;
+  background-color: #02051f86;
+  color: #fff;
+  font-size: 1em;
+  font-family: 'Miriam Libre', sans-serif;
+}
+
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+}
+
+.mainbox .temp {
   font-size: 40px;
+  font-family: 'Epilogue', sans-serif;
+}
+
+.mainbox .icon {
+  width: 70px;
+}
+
+h1.temp {
+  margin: 0;
+}
+
+#pixbox h1 {
+  transition: 1s all ease;
+  background-color: transparent;
+}
+
+#pixbox.active h1 {
+  font-size: 130px;
+  position: relative;
+  top: 60%;
+  left: 5%;
+  font-weight: bold;
+  opacity: 1;
+}
+#pixbox {
+  opacity: 0.3;
+  transition: 1s all ease;
+  background-position: cover;
+}
+
+#pixbox.active {
+  background-position: left;
+  opacity: 0.7;
+}
+
+.city {
+  font-size: 70px;
+  font-family: 'Allerta Stencil', sans-serif;
 }
